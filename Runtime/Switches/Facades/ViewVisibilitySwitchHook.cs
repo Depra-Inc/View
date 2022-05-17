@@ -13,7 +13,7 @@ namespace Depra.View.Runtime.Switches.Facades
         private ViewVisibilitySwitchBase _viewSwitch = new TransformRootVisibilitySwitch();
 
         public bool Visible => _viewSwitch.Visible;
-        
+
         private void OnEnable()
         {
             _viewSwitch.Validate(gameObject);
@@ -43,5 +43,13 @@ namespace Depra.View.Runtime.Switches.Facades
 
         [Button]
         public void Reset() => Validate(gameObject);
+
+        private void OnValidate()
+        {
+            if (_viewSwitch == null)
+            {
+                throw new NullReferenceException($"View switch {gameObject.name} is null!");
+            }
+        }
     }
 }

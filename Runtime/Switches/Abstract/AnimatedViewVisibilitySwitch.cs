@@ -11,22 +11,14 @@ namespace Depra.View.Runtime.Switches.Abstract
 
         public override bool Visible => RootProvider.RootActive;
 
-        public override void Show(Action onComplete)
-        {
-            ShowOverride(() => OnEnabled(onComplete));
-        }
+        public override void Show(Action onComplete) => ShowOverride(() => OnEnabled(onComplete));
 
-        public override void Hide(Action onComplete)
-        {
-            HideOverride(() => HideInstantly(onComplete));
-        }
+        public override void Hide(Action onComplete) => HideOverride(() => HideInstantly(onComplete));
 
         protected abstract void ShowOverride(Action onComplete);
 
         protected abstract void HideOverride(Action onComplete);
-
-        #region Safe access to animation
-
+        
         public void TryShow() => TryShow(null);
 
         public override void TryShow(Action onComplete)
@@ -47,10 +39,6 @@ namespace Depra.View.Runtime.Switches.Abstract
             }
         }
 
-        #endregion
-
-        #region Instant access
-
         public override void ShowInstantly()
         {
             RootProvider.SetRootActive(true);
@@ -64,8 +52,6 @@ namespace Depra.View.Runtime.Switches.Abstract
             RootProvider.SetRootActive(false);
             OnDisabled(onComplete);
         }
-
-        #endregion
 
         protected virtual void OnEnabled(Action onComplete = null)
         {

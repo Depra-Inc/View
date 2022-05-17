@@ -1,7 +1,9 @@
 ﻿using System;
+using JetBrains.Annotations;
 
 namespace Depra.View.Runtime.Switches.Interfaces
 {
+    [PublicAPI]
     public interface IViewVisibilitySwitchWithCallback
     {
         /// <summary>
