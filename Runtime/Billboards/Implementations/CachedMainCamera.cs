@@ -1,13 +1,16 @@
 ﻿using System;
+using Depra.View.Runtime.Billboards.Interfaces;
 using UnityEngine;
 
-namespace Depra.View.Runtime.Billboards.Utils
+namespace Depra.View.Runtime.Billboards.Implementations
 {
-    public class CachedMainCamera
+    [Serializable]
+    [AddTypeMenu("Main Camera")]
+    public class CachedMainCamera : ICameraProvider
     {
         private Camera _worldCamera;
 
-        public Camera Value
+        public Camera Camera
         {
             get
             {
@@ -19,7 +22,7 @@ namespace Depra.View.Runtime.Billboards.Utils
                 _worldCamera = Camera.main;
                 if (_worldCamera == null)
                 {
-                    throw new NullReferenceException();
+                    throw new NullReferenceException("No camera found with tag 'MainCamera'!");
                 }
 
                 return _worldCamera;

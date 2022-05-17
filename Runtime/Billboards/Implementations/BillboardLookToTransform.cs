@@ -1,11 +1,13 @@
-using Depra.UI.Runtime.PassiveViews.Billboards.Base;
 using Depra.View.Runtime.Billboards.Abstract;
 using UnityEngine;
 
 namespace Depra.View.Runtime.Billboards.Implementations
 {
+    /// <summary>
+    /// Use to force a non-physical object to always face another object in your game.
+    /// </summary>
     [ExecuteAlways]
-    public class TransformBillboard : Billboard<Transform>
+    public class BillboardLookToTransform : Billboard<Transform>
     {
         [SerializeField] private BillboardParameters _parameters;
 
@@ -19,8 +21,8 @@ namespace Depra.View.Runtime.Billboards.Implementations
 
         public override void LookAtTarget()
         {
-            var rotation = _parameters.ApplyRotationOffset(Target);
-            transform.rotation = rotation;
+            var targetRotation = _parameters.ApplyRotationOffset(Target.rotation);
+            transform.rotation = targetRotation;
         }
     }
 }
