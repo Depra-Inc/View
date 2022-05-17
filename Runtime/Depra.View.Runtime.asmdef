@@ -1,0 +1,20 @@
+{
+    "name": "Depra.View.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:49b49c76ee64f6b41bf28ef951cb0e50",
+        "GUID:31976cc9e85bdd9459e856fcb40d0d50",
+        "GUID:a344d304b73c12044bacde5ea024459c",
+        "GUID:be22aa4b9c5c8a442954002203958deb",
+        "GUID:776d03a35f1b52c4a9aed9f56d7b4229"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
