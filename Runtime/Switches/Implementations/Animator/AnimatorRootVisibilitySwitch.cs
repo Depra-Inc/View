@@ -15,10 +15,10 @@ namespace Depra.View.Runtime.Switches.Implementations.Animator
     {
         [Required] [SerializeField] private InterfaceReference<IActionLifetimeRouter> _actionRouter;
 
-        [AnimatorParam("_animator"), SerializeField]
+        [AnimatorParam("Animator"), SerializeField]
         private int _showTriggerHash;
 
-        [AnimatorParam("_animator"), SerializeField]
+        [AnimatorParam("Animator"), SerializeField]
         private int _hideTriggerHash;
 
         private Animator Animator => RootProvider.Animator;
