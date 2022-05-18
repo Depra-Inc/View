@@ -1,0 +1,19 @@
+{
+    "name": "Depra.View.Tests.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:38240404b5d4bc64faeb802e36ad38e1",
+        "GUID:0acc523941302664db1f4e527237feb3"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

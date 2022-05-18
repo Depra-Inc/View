@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Depra.View.Runtime.Billboards.Implementations
 {
     [Serializable]
-    [AddTypeMenu("Main Camera")]
+    [AddTypeMenu("Main Cached")]
     public class CachedMainCamera : ICameraProvider
     {
         private Camera _worldCamera;

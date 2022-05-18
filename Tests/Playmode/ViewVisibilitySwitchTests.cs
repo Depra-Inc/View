@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using Assert = UnityEngine.Assertions.Assert;
 
-namespace Depra.View.Tests.Switches
+namespace Depra.View.Tests.Playmode
 {
     public class ViewVisibilitySwitchTests : MonoBehaviour
     {
